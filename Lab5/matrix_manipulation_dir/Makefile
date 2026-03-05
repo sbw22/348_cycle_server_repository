@@ -8,3 +8,7 @@ matrix_manipulation.o: matrix_manipulation.c
 
 clean:
 	rm *.o output
+
+all: output
+	./output
+	make clean
