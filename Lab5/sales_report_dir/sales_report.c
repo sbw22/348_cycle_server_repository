@@ -4,7 +4,7 @@
 int monthly_sales(float sales[12], char month[12][10]){
     printf("\nMonthly Sales Report for 2024:\n");
     for(int i = 0; i < 12; i++){
-        printf("%s: $%.2f\n", month[i], sales[i]);
+        printf("%-15s $%5.2f\n", month[i], sales[i]);
     }
     return 0;
 }
@@ -42,7 +42,9 @@ int six_mth_moving_avg(float sales[12], char month[12][10]){
             sum += sales[j];
         }
         float moving_avg = sum / 6;
-        printf("Months %s to %s: $%.2f\n", month[i], month[i + 5], moving_avg);
+        char month_range[20];
+        snprintf(month_range, sizeof(month_range), "%s - %s", month[i], month[i + 5]);
+        printf("%-20s $%-10.2f\n", month_range, moving_avg);
     }
     return 0;
 }
@@ -68,7 +70,7 @@ int high_to_low_months(float sales[12], char month[12][10]){
     }
 
     for(int i = 11; i >= 0; i--){
-        printf("%s: $%.2f\n", month[i], sales[i]);
+        printf("%-15s $%.2f\n", month[i], sales[i]);
     }
     return 0;
 }
