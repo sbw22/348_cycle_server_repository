@@ -8,3 +8,7 @@ sales_report.o: sales_report.c
 
 clean:
 	rm *.o output
+
+all: output
+	./output
+	make clean
