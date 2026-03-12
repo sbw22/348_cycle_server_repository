@@ -1,0 +1,17 @@
+/* This is the CSS file for practice1.html */
+
+h1 {
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: red;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    background-color: teal;
+    margin: 20px;
+    padding: 20px;
+}
